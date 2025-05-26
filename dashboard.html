@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - TaskNest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body class="dashboard-body">
+  <!-- Dashboard Header -->
+  <header class="dashboard-header">
+    <div class="header-container">
+      <div class="brand">
+        <a href="dashboard.html" class="logo">
+          <i class="fas fa-layer-group"></i>
+          <span>TaskNest</span>
+        </a>
+      </div>
+      
+      <div class="header-search">
+        <div class="search-container">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="Search tasks, projects, and more...">
+        </div>
+      </div>
+      
+      <div class="header-actions">
+        <button class="header-btn notifications">
+          <i class="fas fa-bell"></i>
+          <span class="badge">3</span>
+        </button>
+        
+        <button class="header-btn create-new">
+          <i class="fas fa-plus"></i>
+          <span>Create</span>
+        </button>
+        
+        <div class="user-menu">
+          <button class="user-menu-btn">
+            <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=150" alt="User Avatar" class="user-avatar">
+            <span class="user-name">John Smith</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="user-dropdown">
+            <ul>
+              <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+              <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+              <li><a href="#"><i class="fas fa-question-circle"></i> Help Center</a></li>
+              <li class="divider"></li>
+              <li><a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Dashboard Layout -->
+  <div class="dashboard-layout">
+    <!-- Sidebar -->
+    <aside class="dashboard-sidebar">
+      <nav class="sidebar-nav">
+        <ul>
+          <li class="nav-item active">
+            <a href="dashboard.html">
+              <i class="fas fa-home"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#">
+              <i class="fas fa-tasks"></i>
+              <span>My Tasks</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#">
+              <i class="fas fa-calendar"></i>
+              <span>Calendar</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#">
+              <i class="fas fa-chart-bar"></i>
+              <span>Reports</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#">
+              <i class="fas fa-users"></i>
+              <span>Team</span>
+            </a>
+          </li>
+        </ul>
+        
+        <div class="sidebar-divider"></div>
+        
+        <div class="sidebar-section">
+          <h3>Projects</h3>
+          <ul>
+            <li class="project-item">
+              <a href="#">
+                <span class="project-color" style="background-color: #4F46E5;"></span>
+                <span>Website Redesign</span>
+              </a>
+            </li>
+            <li class="project-item">
+              <a href="#">
+                <span class="project-color" style="background-color: #10B981;"></span>
+                <span>Product Launch</span>
+              </a>
+            </li>
+            <li class="project-item">
+              <a href="#">
+                <span class="project-color" style="background-color: #F59E0B;"></span>
+                <span>Marketing Campaign</span>
+              </a>
+            </li>
+            <li class="project-item">
+              <a href="#" class="add-project">
+                <i class="fas fa-plus"></i>
+                <span>Add Project</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="sidebar-footer">
+          <a href="#" class="btn btn-outline-sm">
+            <i class="fas fa-cog"></i>
+            <span>Settings</span>
+          </a>
+          <a href="index.html" class="btn btn-outline-sm">
+            <i class="fas fa-globe"></i>
+            <span>Back to Website</span>
+          </a>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="dashboard-content">
+      <!-- Dashboard Header -->
+      <div class="content-header">
+        <h1>Welcome back, Hardik!</h1>
+        <p>Here's what's happening with your projects today.</p>
+      </div>
+      
+      <!-- Overview Cards -->
+      <div class="overview-cards">
+        <div class="overview-card">
+          <div class="overview-icon">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <div class="overview-details">
+            <h3>Completed Tasks</h3>
+            <p class="overview-value">24</p>
+            <p class="overview-trend positive">
+              <i class="fas fa-arrow-up"></i> 12% from last week
+            </p>
+          </div>
+        </div>
+        
+        <div class="overview-card">
+          <div class="overview-icon">
+            <i class="fas fa-clipboard-list"></i>
+          </div>
+          <div class="overview-details">
+            <h3>In Progress</h3>
+            <p class="overview-value">12</p>
+            <p class="overview-trend negative">
+              <i class="fas fa-arrow-down"></i> 5% from last week
+            </p>
+          </div>
+        </div>
+        
+        <div class="overview-card">
+          <div class="overview-icon">
+            <i class="fas fa-clock"></i>
+          </div>
+          <div class="overview-details">
+            <h3>Pending Tasks</h3>
+            <p class="overview-value">18</p>
+            <p class="overview-trend neutral">
+              <i class="fas fa-minus"></i> Same as last week
+            </p>
+          </div>
+        </div>
+        
+        <div class="overview-card">
+          <div class="overview-icon">
+            <i class="fas fa-calendar-check"></i>
+          </div>
+          <div class="overview-details">
+            <h3>Upcoming Deadlines</h3>
+            <p class="overview-value">5</p>
+            <p class="overview-trend">Next: Today</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Tasks Section -->
+      <section class="dashboard-section">
+        <div class="section-header">
+          <h2>Your Tasks</h2>
+          <div class="section-actions">
+            <div class="dropdown">
+              <button class="btn btn-outline-sm">
+                <i class="fas fa-filter"></i>
+                <span>Filter</span>
+              </button>
+            </div>
+            <button class="btn btn-primary-sm">
+              <i class="fas fa-plus"></i>
+              <span>Add Task</span>
+            </button>
+          </div>
+        </div>
+        
+        <div class="tasks-container">
+          <div class="task-tabs">
+            <button class="tab-btn active" data-tab="today">Today</button>
+            <button class="tab-btn" data-tab="upcoming">Upcoming</button>
+            <button class="tab-btn" data-tab="all">All Tasks</button>
+          </div>
+          
+          <div class="tasks-list">
+            <div class="task-item">
+              <div class="task-checkbox">
+                <input type="checkbox" id="task1">
+                <label for="task1"></label>
+              </div>
+              <div class="task-content">
+                <h3 class="task-title">Finalize homepage design</h3>
+                <p class="task-meta">
+                  <span class="project-tag" style="background-color: #4F46E5;">Website Redesign</span>
+                  <span class="task-due">Today, 2:00 PM</span>
+                </p>
+              </div>
+              <div class="task-actions">
+                <button class="task-action-btn">
+                  <i class="fas fa-ellipsis-h"></i>
+                </button>
+              </div>
+            </div>
+            
+            <div class="task-item">
+              <div class="task-checkbox">
+                <input type="checkbox" id="task2">
+                <label for="task2"></label>
+              </div>
+              <div class="task-content">
+                <h3 class="task-title">Review marketing copy for launch</h3>
+                <p class="task-meta">
+                  <span class="project-tag" style="background-color: #F59E0B;">Marketing Campaign</span>
+                  <span class="task-due">Today, 5:00 PM</span>
+                </p>
+              </div>
+              <div class="task-actions">
+                <button class="task-action-btn">
+                  <i class="fas fa-ellipsis-h"></i>
+                </button>
+              </div>
+            </div>
+            
+            <div class="task-item">
+              <div class="task-checkbox">
+                <input type="checkbox" id="task3">
+                <label for="task3"></label>
+              </div>
+              <div class="task-content">
+                <h3 class="task-title">Prepare user testing protocol</h3>
+                <p class="task-meta">
+                  <span class="project-tag" style="background-color: #10B981;">Product Launch</span>
+                  <span class="task-due">Tomorrow, 10:00 AM</span>
+                </p>
+              </div>
+              <div class="task-actions">
+                <button class="task-action-btn">
+                  <i class="fas fa-ellipsis-h"></i>
+                </button>
+              </div>
+            </div>
+            
+            <div class="task-item">
+              <div class="task-checkbox">
+                <input type="checkbox" id="task4">
+                <label for="task4"></label>
+              </div>
+              <div class="task-content">
+                <h3 class="task-title">Update team on project status</h3>
+                <p class="task-meta">
+                  <span class="project-tag" style="background-color: #4F46E5;">Website Redesign</span>
+                  <span class="task-due">Tomorrow, 1:00 PM</span>
+                </p>
+              </div>
+              <div class="task-actions">
+                <button class="task-action-btn">
+                  <i class="fas fa-ellipsis-h"></i>
+                </button>
+              </div>
+            </div>
+            
+            <div class="task-item">
+              <div class="task-checkbox">
+                <input type="checkbox" id="task5">
+                <label for="task5"></label>
+              </div>
+              <div class="task-content">
+                <h3 class="task-title">Create social media content calendar</h3>
+                <p class="task-meta">
+                  <span class="project-tag" style="background-color: #F59E0B;">Marketing Campaign</span>
+                  <span class="task-due">Friday, 11:00 AM</span>
+                </p>
+              </div>
+              <div class="task-actions">
+                <button class="task-action-btn">
+                  <i class="fas fa-ellipsis-h"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Recent Activity & Upcoming Section -->
+      <div class="dashboard-two-column">
+        <section class="dashboard-section activity-section">
+          <div class="section-header">
+            <h2>Recent Activity</h2>
+            <a href="#" class="view-all">View All</a>
+          </div>
+          
+          <div class="activity-list">
+            <div class="activity-item">
+              <div class="activity-icon">
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <div class="activity-content">
+                <p class="activity-text">
+                  <span class="activity-user">You</span> completed the task 
+                  <span class="activity-highlight">Design system updates</span>
+                </p>
+                <p class="activity-time">35 minutes ago</p>
+              </div>
+            </div>
+            
+            <div class="activity-item">
+              <div class="activity-icon">
+                <i class="fas fa-comment"></i>
+              </div>
+              <div class="activity-content">
+                <p class="activity-text">
+                  <span class="activity-user">Emily</span> commented on 
+                  <span class="activity-highlight">Homepage redesign</span>
+                </p>
+                <p class="activity-time">2 hours ago</p>
+              </div>
+            </div>
+            
+            <div class="activity-item">
+              <div class="activity-icon">
+                <i class="fas fa-plus-circle"></i>
+              </div>
+              <div class="activity-content">
+                <p class="activity-text">
+                  <span class="activity-user">David</span> created a new task 
+                  <span class="activity-highlight">Review Q3 marketing plan</span>
+                </p>
+                <p class="activity-time">Yesterday at 4:30 PM</p>
+              </div>
+            </div>
+            
+            <div class="activity-item">
+              <div class="activity-icon">
+                <i class="fas fa-user-plus"></i>
+              </div>
+              <div class="activity-content">
+                <p class="activity-text">
+                  <span class="activity-user">You</span> added 
+                  <span class="activity-user">Sarah</span> to project 
+                  <span class="activity-highlight">Product Launch</span>
+                </p>
+                <p class="activity-time">Yesterday at 11:15 AM</p>
+              </div>
+            </div>
+            
+            <div class="activity-item">
+              <div class="activity-icon">
+                <i class="fas fa-file-upload"></i>
+              </div>
+              <div class="activity-content">
+                <p class="activity-text">
+                  <span class="activity-user">Alex</span> uploaded 
+                  <span class="activity-highlight">Brand Guidelines.pdf</span>
+                </p>
+                <p class="activity-time">Monday at 9:30 AM</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section class="dashboard-section upcoming-section">
+          <div class="section-header">
+            <h2>Upcoming</h2>
+            <a href="#" class="view-all">View Calendar</a>
+          </div>
+          
+          <div class="calendar-widget">
+            <div class="calendar-header">
+              <h3>September 2025</h3>
+              <div class="calendar-nav">
+                <button class="calendar-nav-btn"><i class="fas fa-chevron-left"></i></button>
+                <button class="calendar-nav-btn"><i class="fas fa-chevron-right"></i></button>
+              </div>
+            </div>
+            
+            <div class="calendar-body">
+              <div class="calendar-weekdays">
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+              </div>
+              <div class="calendar-dates">
+                <div class="date inactive">28</div>
+                <div class="date inactive">29</div>
+                <div class="date inactive">30</div>
+                <div class="date inactive">31</div>
+                <div class="date">1</div>
+                <div class="date">2</div>
+                <div class="date">3</div>
+                <div class="date">4</div>
+                <div class="date">5</div>
+                <div class="date">6</div>
+                <div class="date">7</div>
+                <div class="date">8</div>
+                <div class="date">9</div>
+                <div class="date">10</div>
+                <div class="date">11</div>
+                <div class="date">12</div>
+                <div class="date">13</div>
+                <div class="date">14</div>
+                <div class="date has-events current">15</div>
+                <div class="date has-events">16</div>
+                <div class="date">17</div>
+                <div class="date has-events">18</div>
+                <div class="date">19</div>
+                <div class="date">20</div>
+                <div class="date">21</div>
+                <div class="date">22</div>
+                <div class="date">23</div>
+                <div class="date">24</div>
+                <div class="date has-events">25</div>
+                <div class="date">26</div>
+                <div class="date">27</div>
+                <div class="date">28</div>
+                <div class="date">29</div>
+                <div class="date">30</div>
+                <div class="date inactive">1</div>
+                <div class="date inactive">2</div>
+              </div>
+            </div>
+            
+            <div class="upcoming-events">
+              <h3>Today's Events</h3>
+              
+              <div class="event-item">
+                <div class="event-time">10:00 AM</div>
+                <div class="event-content">
+                  <h4>Weekly Team Standup</h4>
+                  <p>Marketing Team • 30 minutes</p>
+                </div>
+              </div>
+              
+              <div class="event-item">
+                <div class="event-time">2:00 PM</div>
+                <div class="event-content">
+                  <h4>Client Presentation</h4>
+                  <p>Product Launch • 1 hour</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/main.js" type="module"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
