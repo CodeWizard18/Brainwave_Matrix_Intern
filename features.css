@@ -1,0 +1,94 @@
+/* ----- Features Detailed Section ----- */
+.features-detailed {
+  padding: var(--space-16) 0;
+}
+
+.feature-detailed {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--space-16);
+  gap: var(--space-10);
+}
+
+.feature-detailed.reverse {
+  flex-direction: row-reverse;
+}
+
+.feature-image {
+  flex: 1;
+  max-width: 550px;
+}
+
+.feature-image img {
+  width: 100%;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+}
+
+.feature-info {
+  flex: 1;
+}
+
+.feature-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(79, 70, 229, 0.1);
+  color: var(--primary);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-4);
+  font-size: 1.5rem;
+}
+
+.feature-info h2 {
+  font-size: 2rem;
+  margin-bottom: var(--space-4);
+}
+
+.feature-info p {
+  color: var(--gray-700);
+  font-size: 1.125rem;
+  margin-bottom: var(--space-6);
+}
+
+.feature-list {
+  list-style: none;
+}
+
+.feature-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--space-3);
+  color: var(--gray-700);
+}
+
+.feature-list li i {
+  color: var(--success);
+  margin-right: var(--space-3);
+  font-size: 1rem;
+}
+
+/* ----- Media Queries ----- */
+@media (max-width: 991px) {
+  .feature-detailed,
+  .feature-detailed.reverse {
+    flex-direction: column;
+    gap: var(--space-8);
+  }
+  
+  .feature-image {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .feature-info h2 {
+    font-size: 1.75rem;
+  }
+  
+  .feature-info p {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,224 @@
+/* ----- Pricing Toggle Section ----- */
+.pricing-toggle {
+  padding-top: 0;
+  padding-bottom: var(--space-10);
+}
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+}
+
+.toggle-label {
+  font-weight: 500;
+  color: var(--gray-500);
+  cursor: pointer;
+}
+
+.toggle-label.active {
+  color: var(--gray-900);
+  font-weight: 600;
+}
+
+.save-badge {
+  display: inline-block;
+  background-color: rgba(16, 185, 129, 0.1);
+  color: var(--secondary);
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  margin-left: var(--space-1);
+  font-weight: 600;
+}
+
+/* Switch Toggle */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--gray-300);
+  transition: var(--transition);
+  border-radius: var(--radius-full);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: var(--transition);
+  border-radius: 50%;
+  box-shadow: var(--shadow-sm);
+}
+
+input:checked + .slider {
+  background-color: var(--primary);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--primary);
+}
+
+input:checked + .slider:before {
+  transform: translateX(30px);
+}
+
+/* ----- Pricing Comparison Table ----- */
+.pricing-comparison {
+  padding-top: 0;
+  padding-bottom: var(--space-16);
+}
+
+.comparison-table-wrapper {
+  overflow-x: auto;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: var(--space-4);
+  text-align: center;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.comparison-table th {
+  background-color: var(--primary);
+  color: white;
+  font-weight: 600;
+}
+
+.comparison-table th.popular {
+  background-color: var(--primary-dark);
+}
+
+.comparison-table td {
+  background-color: white;
+}
+
+.comparison-table td.popular {
+  background-color: rgba(79, 70, 229, 0.05);
+}
+
+.comparison-table tr:last-child td {
+  border-bottom: none;
+}
+
+.comparison-table td:first-child {
+  text-align: left;
+  font-weight: 500;
+  color: var(--gray-800);
+}
+
+.comparison-table i.fa-check {
+  color: var(--success);
+  font-size: 1.125rem;
+}
+
+.comparison-table i.fa-times {
+  color: var(--gray-400);
+  font-size: 1.125rem;
+}
+
+/* ----- FAQ Section ----- */
+.faq {
+  padding-top: 0;
+}
+
+.faq-grid {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  margin-bottom: var(--space-4);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background-color: white;
+  box-shadow: var(--shadow-sm);
+}
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-6);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.faq-question h3 {
+  font-size: 1.125rem;
+  margin-bottom: 0;
+}
+
+.faq-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-full);
+  background-color: var(--gray-100);
+  color: var(--gray-700);
+  transition: var(--transition);
+}
+
+.faq-item.active .faq-toggle {
+  transform: rotate(45deg);
+  background-color: var(--primary);
+  color: white;
+}
+
+.faq-answer {
+  padding: 0 var(--space-6);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 500px;
+  padding: 0 var(--space-6) var(--space-6);
+}
+
+/* ----- Media Queries ----- */
+@media (max-width: 768px) {
+  .comparison-table th,
+  .comparison-table td {
+    padding: var(--space-3) var(--space-2);
+    font-size: 0.875rem;
+  }
+  
+  .faq-question h3 {
+    font-size: 1rem;
+  }
+}
